@@ -121,7 +121,15 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
     public static String checkEvenOdd(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        String result = '';
+        if(a==Null){
+            result = Null;
+        }else if(math.mod(a, 2)==0){
+            result = 'Even';
+        }else{
+            result = 'Odd';
+        }
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -132,7 +140,15 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
-        return null; // Replace null with the variable you used to store the result
+        String result = '';
+        if(a==Null){
+            result = 'Null';
+        }else if(a==''){
+            result = 'Empty';
+        }else{
+            result = 'Contains Text';
+        }
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -148,6 +164,10 @@ public with sharing class FlowControlLoopsCollections {
      * @return The grade for the given score.
      */
     public static String determineGrade(Integer score) {
+        String grade;
+        if(score==90){
+            return grade = 'A';
+        }else
         return null; // Replace null with the variable you used to store the result
     }
 
