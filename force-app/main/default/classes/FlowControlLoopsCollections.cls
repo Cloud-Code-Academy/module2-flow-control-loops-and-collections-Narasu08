@@ -29,10 +29,9 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        
-        if(x<y && x!=null && y!=null){
-            String output = 'Hello World';
-            system.debug('if the above conditions are not satisfied' + output);
+        if(x>y){
+            String output = 'Hello World!';
+            system.debug(output);
             return output;
         }else{
             system.debug('If x<y and x= null and y=null please return null');
