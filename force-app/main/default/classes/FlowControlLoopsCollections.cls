@@ -247,14 +247,15 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static List<Integer> createAndPopulateList() {
         // Create a new list of integers
+        List<Integer> newList = new List<Integer>();
 
         // Add the integers 1, 2, and 3 to the list
-        // add 1
-        // add 2
-        // add 3
-
+        newList.add(1);// add 1
+        newList.add(2);// add 2
+        newList.add(3);// add 3
+        system.debug(newList);
         // Return the populated list
-        return null; // Replace null with the variable you used to store the result
+        return newList; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -268,9 +269,13 @@ public with sharing class FlowControlLoopsCollections {
         List<Integer> numberList = new List<Integer>{1, 2, 3, 4, 5}; //DO NOT CHANGE
 
         // Remove the 3rd element (number 3) from the list
+        numberList.remove(2);
+        /*Integer numberIndex = numberList.indexOf(3);
+          numberList.remove(numberIndex);*/
+
         
         // Return the updated list
-        return null; // Replace null with the variable you used to store the result
+        return numberList; // Replace null with the variable you used to store the result
     }
 
     /**
