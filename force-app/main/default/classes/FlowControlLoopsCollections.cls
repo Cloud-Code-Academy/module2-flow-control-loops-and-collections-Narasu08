@@ -407,20 +407,22 @@ public with sharing class FlowControlLoopsCollections {
      * Resource: https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_map.htm#apex_System_Map_get
      * @param employeeName The name of the employee.
      * @return The salary of the employee, or null if the employee is not found in the Map.
-     */
+     */ 
     public static Integer getSalary(String employeeName) {
         // Initialize a Map
-
+        Map<String, Integer> employeeSalary = new Map<String, Integer>{
         // Add key-value pairs to the Map
-        // add John Doe => 50000
-        // add Jane Smith => 60000
-        // add Sam Brown => 55000
-        // add Alice Johnson => 65000
+           'John Doe' => 50000,
+           'Jane Smith' => 60000,
+           'Sam Brown' => 55000,
+           'Alice Johnson' => 65000
+        };
 
         // Get the salary of the employee
+        Integer salary = employeeSalary.get(employeeName);
 
         // Return the salary of the employee, or null if the employee is not found in the Map
-        return null; // Replace null with the variable you used to store the result
+        return salary; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -442,15 +444,24 @@ public with sharing class FlowControlLoopsCollections {
         // add Jane Smith => 60000
         // add Sam Brown => 55000
         // add Alice Johnson => 65000
+        employeeSalaries.put('John Doe',50000);
+        employeeSalaries.put('Jane Smith',60000);
+        employeeSalaries.put('Sam Brown',55000);
+        employeeSalaries.put('Alice Johnson',65000);
 
         // Initialize a list to store the names of high paid employees
+        List<String> highPaidEmpList = new List<String>();
 
         // Iterate over the Map using a for loop
+        for(String empName: employeeSalaries.keySet()){
             // Check if the salary of the employee is more than 55000
-                // Add the employee to the list of high paid employees
-
+            if(employeeSalaries.get(empName)>55000){
+                  // Add the employee to the list of high paid employees
+                  highPaidEmpList.add(empName);
+            }
+        }
         // Return the list of high paid employees
-        return null; // Replace null with the variable you used to store the result
+        return highPaidEmpList; // Replace null with the variable you used to store the result
     }
 
 }
