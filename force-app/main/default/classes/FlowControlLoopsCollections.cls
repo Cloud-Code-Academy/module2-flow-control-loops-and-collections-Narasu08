@@ -347,11 +347,16 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer findWordInList(String wordToFind, List<String> words) {
         // The variable to store the index of the word
+        Integer index = -1;
 
         // Loop through the list of words
-            // If the current word is the word to find, exit the loop
-
-        return null; // Replace null with the variable you used to store the result
+        for(Integer i=0; i< words.size(); i++){
+        // If the current word is the word to find, exit the loop
+            if(wordToFind == words.get(i)){
+                index = i;
+            }
+        }
+        return index; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -364,8 +369,14 @@ public with sharing class FlowControlLoopsCollections {
     public static Decimal countMoney() {
         // The list of money in the wallet, represented in dollars and cents
         List<Decimal> moneyInWallet = new List<Decimal>{0.50, 10, 3.84, 24.60, 9.08, 50, 4.90}; //DO NOT CHANGE
-
-        return null; // Replace null with the variable you used to store the result
+        Decimal resultTotal = 0;
+        for(Decimal totalAmt: moneyInWallet){
+            resultTotal = resultTotal + totalAmt;
+            if(resultTotal>40){
+                break;
+            }
+        }
+        return resultTotal; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -376,15 +387,16 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Map<String, Integer> addItemsToMap() {
         // Initialize an empty Map
-
+        Map<String, Integer> fruitQuantity = new Map<String, Integer>{
         // Add key-value pairs to the Map
-        // add Apples => 5
-        // add Oranges => 10
-        // add Bananas => 15
-        // add Pears => 20
-        // add Grapes => 25
-
-        return null; // Replace null with the variable you used to store the result
+        // add 
+        'Apples' => 5,
+        'Oranges' => 10,
+        'Bananas' => 15,
+        'Pears' => 20,
+        'Grapes' => 25
+        };
+        return fruitQuantity; // Replace null with the variable you used to store the result
     }
 
     /**
